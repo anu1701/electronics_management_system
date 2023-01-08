@@ -33,7 +33,7 @@
           <a class="nav-link" href="products.php">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact us.php">Contact Us</a>
+          <a class="nav-link" href="contact_us.php">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Register</a>
