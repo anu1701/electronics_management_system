@@ -9,7 +9,7 @@ include('./includes/header.php');
         <div class="box-wrapper">
             <div class="info-wrap">
                 <h2 class="info-title">Contact Information</h2>
-                <h3 class="info-sub-title">Fill up the form and our Team will get back to you within 24 hours</h3>
+                <h3 class="info-sub-title">Fill up the form to know about exciting offers</h3>
                 <ul class="info-details">
                     <li>
                         <i class="fas fa-phone-alt"></i>
