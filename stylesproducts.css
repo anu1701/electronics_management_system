@@ -1,23 +1,29 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+}
+html,
+body{
+    height: 100%;
+    font-family: "Nunito Sans" , sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .logo{
     width: 5%;
     height: 5%;
 }
-
 .card-img-top{
     width: 100%;
     height: 200px;
     object-fit: contain;
 }
-/* .admin_image{
-    width: 100px;
-    object-fit:contain;
-} */
+.row{
+margin-top: 20px;
+margin-left:20px;
+}
 /*footer*/
 p{
     font-size: 15px;
