@@ -11,273 +11,36 @@
   <div class="col-md-10">
     <!-- products -->
     <div class="row">
-      <div class="col-md-4 mb-2">
-      <div class="card">
-  <img src="./images/watch.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-  <img src="./images/tv.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-  <img src="./images/ref.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-  <img src="./images/product-1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-  <img src="./images/product-2.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/product-3.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/product-4.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/product-5.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/product-6.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/product-7.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/product-8.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/product-9.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/tv1.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/sonytv.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/nikon-camera.png" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/canon-camera.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/hp-laptop.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/watch2.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/ref.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/ref.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/ref.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/ref.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/ref.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-      <div class="col-md-4 mb-2">
-      <div class="card">
-     <img src="./images/ref.jpg" class="card-img-top" alt="...">
-     <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-btn-light" style="background-color:#810CA8">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-      </div>
-    </div>
+      <!--fetching products-->
+      <?php
+      $select_query="select * from products";
+      $result_query=mysqli_query($con,$select_query);
+      //$row=mysqli_fetch_assoc($result_query);
+     // echo $row['product_title'];
+        while($row=mysqli_fetch_assoc($result_query)){
+          $product_id=$row['product_id'];
+          $product_id=$row['product_id'];
+          $product_id=$row['product_id'];
+          $product_id=$row['product_id'];
+          $product_id=$row['product_id'];
+          $product_id=$row['product_id'];
+          $product_id=$row['product_id'];
 
-  </div>
+        }
+      ?>
+      <div class="col-md-4 mb-2">
+       <div class="card">
+          <img src="./images/watch.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                       <a href="#" class="btn btn-light" style="background-color:#810CA8">Add to cart</a>
+                      <a href="#" class="btn btn-secondary">View more</a>
+            </div>
+        </div>
+     </div>
+    </div>
+</div>
   <div class="col-md-2 p-0">
     <!-- brands to be displayed -->
     <ul class="navbar-nav me-auto text-center">

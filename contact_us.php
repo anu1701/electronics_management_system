@@ -13,7 +13,7 @@ include('./includes/header.php');
                 <ul class="info-details">
                     <li>
                         <i class="fas fa-phone-alt"></i>
-                        <span>Phone:</span> <a href="tel:+ 1235 2355 98">+ 1235 2355 98</a>
+                        <span>Phone:</span> <a href="tel:0824-2456845">0824-2456845</a>
                     </li>
                     <li>
                         <i class="fas fa-paper-plane"></i>
