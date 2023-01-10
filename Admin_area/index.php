@@ -29,9 +29,9 @@
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D09CFA;">
             <div class="container-fluid">
-                <img src="../images/icon2.jpg" alt="" class="logo">
+                <img src="../images/logo0.png" alt="" class="logo">
                 <nav class="navbar navbar-expand-lg">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -49,23 +49,23 @@
 
         <!-- third child -->
         <div class="row">
-            <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
+            <div class="col-md-12 p-1 d-flex align-items-center" style="background-color:#D09CFA">
                 <div class="p-3">
                     <a href="#"><img src="../images/admin.jpg" alt="" class="admin_image"></a>
                     <p class="text-light text-center">Admin Name</p>
                 </div>
                 <!-- button*10>a.nav-linl.text-light.bg-info.my-1 -->
                 <div class="button text-center">
-                    <button class="my-3"><a href="insert_product.php" class="nav-link text-light bg-info my-1">Insert Products</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">View Products</a></button>
-                    <button><a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">View Categories</a></button>
-                    <button><a href="index.php?insert_brand" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">View Brands</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">All Orders</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">All Payments</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">List Users</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">Logout</a></button>
+                    <button ><a href="insert_product.php" class="nav-link text-light  " style="background-color:#4F3B78">Insert Products</a></button>
+                    <button><a href="" class="nav-link text-light  " style=background-color:#4F3B78>View Products</a></button>
+                    <button><a href="index.php?insert_category" class="nav-link text-light " style=background-color:#4F3B78>Insert Categories</a></button>
+                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>View Categories</a></button>
+                    <button><a href="index.php?insert_brand" class="nav-link text-light " style="background-color:#4F3B78">Insert Brands</a></button>
+                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>View Brands</a></button>
+                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>All Orders</a></button>
+                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>All Payments</a></button>
+                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>List Users</a></button>
+                    <button><a href="" class="nav-link text-light" style=background-color:#4F3B78>Logout</a></button>
             </div>
         </div>
     </div>

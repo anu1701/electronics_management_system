@@ -8,7 +8,10 @@
     width: 5%;
     height: 5%;
 }
-
+.button text-center button{
+    border-radius: 50%;
+    border:none;
+}
 .card-img-top{
     width: 100%;
     height: 200px;
