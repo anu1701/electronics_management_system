@@ -18,6 +18,7 @@ include('includes/connect.php');
      <?php
      getproducts();
      get_unique_categories();
+     get_unique_brands();
       ?>
     </div>
 </div>
