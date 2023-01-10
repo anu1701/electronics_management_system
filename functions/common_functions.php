@@ -1,13 +1,12 @@
 <?php
 //include connect file
-include('./includes/connect.php');
+include ('./includes/connect.php');
+
 //get products
 function getproducts(){
       global $con;
     $select_query="select * from products order by rand()";
     $result_query=mysqli_query($con,$select_query);
-    //$row=mysqli_fetch_assoc($result_query);
-   // echo $row['product_title'];
       while($row=mysqli_fetch_assoc($result_query)){
         $product_id=$row['product_id'];
         $product_title=$row['product_title'];
@@ -28,6 +27,34 @@ function getproducts(){
          </div>
       </div>";
         }
+}
 
+// displaying brands in sidenav
+function getbrands(){
+  global $con;
+      $select_brands="Select * from brands";
+      $result_brands=mysqli_query($con,$select_brands);
+        while($row_data=mysqli_fetch_assoc($result_brands)){
+          $brand_title=$row_data['brand_title'];
+          $brand_id=$row_data['brand_id'];
+          echo "<li class='nav-item'>
+          <a href='products.php?brand=$brand_id' class='nav-link text-dark' style='background-color:#F3F1F5'>$brand_title</a>
+        </li>";
+        }
+}
 
-}?>
+// displaying categories in sidenav
+function getcategories(){
+  global $con;
+  $select_categories="Select * from categories";
+      $result_categories=mysqli_query($con,$select_categories);
+        while($row_data=mysqli_fetch_assoc($result_categories)){
+          $category_title=$row_data['category_title'];
+          $category_id=$row_data['category_id'];
+          echo "<li class='nav-item'>
+          <a href='products.php?categories=$category_id' class='nav-link text-dark' style='background-color:#F3F1F5'>$category_title</a>
+        </li>";
+        }
+}
+?>
+
