@@ -39,9 +39,7 @@ function getproducts()
 function get_unique_categories()
 {
   global $con;
-
-
-  // condition to check isset or not
+// condition to check isset or not
   if (isset($_GET['category'])) {
     $category_id = $_GET['category'];
     $select_query = "select * from products where category_id=$category_id";
