@@ -14,6 +14,15 @@ include ('functions/common_functions.php');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cart_image{
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        }
+    </style>
 </head>
 <body>
     <!--navbar-->
@@ -83,6 +92,7 @@ cart();
   <!-- fourth child -->
   <div class="container">
         <div class="row">
+            <form action="" method="post">
             <table class="table table-bordered text-center">
                 <thread>
                     <tr>
@@ -91,31 +101,70 @@ cart();
                         <th>Quantity</th>
                         <th>Total Price</th>
                         <th>Remove</th>
-                        <th>Operations</th>
+                        <th colspan="2">Operations</th>
                     </tr>
                 </thread>
                 <tbody>
+                    <!-- php code to display dynamic data -->
+                    <?php
+
+                        $get_ip_add = getIPAddress();
+                        $total_price = 0;
+                        $cart_query = "Select * from cart_details where ip_address='$get_ip_add'";
+                        $result=mysqli_query($con, $cart_query);
+                        while($row=mysqli_fetch_array($result)){
+                            $product_id = $row['product_id'];
+                            $select_products = "Select * from products where product_id='$product_id'";
+                            $result_products = mysqli_query($con, $select_products);
+                            while($row_product_price=mysqli_fetch_array($result_products)){
+                                $product_price = array($row_product_price['product_price']);
+                                $price_table = $row_product_price['product_price'];
+                                $product_title=$row_product_price['product_title'];
+                                $product_image1=$row_product_price['product_image1'];
+                                $product_values = array_sum($product_price);
+                                $total_price += $product_values;
+
+                    ?>
                     <tr>
-                        <td>TV</td>
-                        <td><img src="./images/arrival-1.jpg" alt=""></td>
-                        <td><input type="text" name="" id=""></td>
-                        <td>25000</td>
+                        <td><?php echo $product_title ?></td>
+                        <td><img src="./images/<?php echo $product_image1 ?>" alt="" class="cart_image"></td>
+                        <td><input type="text" name="qty" class="form-input w-50"></td>
+                        <?php
+                        $get_ip_add = getIPAddress();
+                        if(isset($_POST['update_cart'])){
+                            $quantities = $_POST['qty'];
+                            $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add' ";
+                            $result_products_quantity = mysqli_query($con, $update_cart);
+                            $total_price = $total_price * $quantities;
+                        }
+                        ?>
+                        <td><?php echo $price_table ?>/-</td>
                         <td><input type="checkbox"></td>
                         <td>
-                            <p>Update</p>
-                            <p>Remove</p>
+                            <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Update</button> -->
+                            <input type="submit" value="Update Cart" class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8' name="update_cart">
+                            <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Remove</button>
                         </td>
                     </tr>
+
+                    <?php
+                         }
+                         }
+                    ?>
+            
                 </tbody>
             </table>
             <!-- subtotal -->
             <div class="d-flex mb-5">
-                <h4 class="px-3">Subtotal:<strong>25000/-</strong></h4>
-                <a href="products.php" class='btn btn-light px-3 py-3 border-0 mx-3' style='background-color:#810CA8'>Continue Shopping</a>
-                <a href="#" class='btn btn-light px-3 py-3 border-0 mx-3' style='background-color:#810CA8'>Checkout</a>
+                <h4 class="px-3">Subtotal:<strong><?php echo $total_price ?>/-</strong></h4>
+                <a href="products.php" class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Continue Shopping</a>
+                <a href="#" class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Checkout</a>
             </div>
         </div>
   </div>
+  </form>
+
+  <!-- include footer -->
   <?php
   include('includes/footer.php');
   ?>
