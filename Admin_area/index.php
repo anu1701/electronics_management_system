@@ -85,7 +85,7 @@
 
     <!-- last child -->
     <div class="bg-info p-3 text-center footer">
-        <p>All rights reserved ©- Designed by mite-2023</p>
+        <p>All rights reserved ©- Designed by aanchal&anusha-2023</p>
     </div>
 </div>
  
