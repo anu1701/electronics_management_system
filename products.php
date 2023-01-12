@@ -3,11 +3,9 @@ include('includes/connect.php');
 
  ?>
 <?php
- include('includes/header.php')
+include('includes/header.php');
 ?>
-<?php
- include('functions/common_functions.php')
-?>
+
  <link rel="stylesheet" href="stylesproducts.css">
 <!-- fourth child -->
 <div class="row">
@@ -19,6 +17,8 @@ include('includes/connect.php');
      getproducts();
      get_unique_categories();
      get_unique_brands();
+    //  $ip = getIPAddress();  
+    //  echo 'User Real IP Address - '.$ip;
       ?>
     </div>
 </div>
@@ -44,6 +44,11 @@ include('includes/connect.php');
     </ul>
   </div>
 </div>
+
+<!-- calling cart function -->
+<?php
+cart();
+?>
 
 <?php
  include('includes/footer.php')
