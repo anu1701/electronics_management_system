@@ -8,7 +8,7 @@ function getproducts()
   global $con;
 
   // condition to check isset or not
-  if (!isset($_GET['category'])) {
+  if (!isset($_GET['categories'])) {
     if(!isset($_GET['brand'])){
     $select_query = "select * from products order by rand()";
     $result_query = mysqli_query($con, $select_query);
@@ -40,8 +40,8 @@ function get_unique_categories()
 {
   global $con;
 // condition to check isset or not
-  if (isset($_GET['category'])) {
-    $category_id = $_GET['category'];
+  if (isset($_GET['categories'])) {
+    $category_id = $_GET['categories'];
     $select_query = "select * from products where category_id=$category_id";
     $result_query = mysqli_query($con, $select_query);
     $num_of_rows=mysqli_num_rows($result_query);
@@ -94,7 +94,7 @@ function get_unique_brands()
       $brand_id = $row['brand_id'];
       echo "<div class='col-md-4 mb-2'>
         <div class='card shadow' style='width:20rem'>
-          <img src='../admin_area/product_images/$product_image1' class='card-img-top' alt=' $product_title'>
+          <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt=' $product_title'>
              <div class='card-body text-center'>
                <h5 class='card-title'> $product_title </h5>
                   <p class='card-text'>$product_description</p>
