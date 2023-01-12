@@ -43,9 +43,10 @@
         </li></ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="submit">
+       <!-- <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="submit">
                   <i class="fa fa-search"></i>
-                    </button>
+                    </button>-->
+                    <input type="submit" value=search>
       </form>
     </div>
    </div>
