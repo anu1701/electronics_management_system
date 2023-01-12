@@ -85,7 +85,7 @@
 
     <!-- last child -->
     <div class="bg-info p-3 text-center footer">
-        <p>All rights reserved ©- Designed by mite-2023</p>
+        <p>Copyright © 2023 All rights reserved | This template is made with  by Aanchal&Anusha</p>
     </div>
 </div>
  

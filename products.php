@@ -3,11 +3,9 @@ include('includes/connect.php');
 
  ?>
 <?php
- include('includes/header.php')
+include('includes/header.php');
 ?>
-<?php
- include('functions/common_functions.php')
-?>
+
  <link rel="stylesheet" href="stylesproducts.css">
 <!-- fourth child -->
 <div class="row">
