@@ -1,5 +1,6 @@
 <?php
-include ('./functions/common_functions.php');
+include('includes/connect.php');
+include ('functions/common_functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,15 +55,14 @@ include ('./functions/common_functions.php');
           <a class="nav-link" href="#">Total Price:<?php total_cart_price(); ?>/-</a>
         </li>
       </ul>
-      <form class="d-flex" action="search_product.php" method="get">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
+      <form class="d-flex" action="" method="get">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
        <!-- <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="submit">
                   <i class="fa fa-search"></i>
                     </button>-->
                     <!-- <input type="submit" value=search> -->
                     <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
                     <input type="submit" value="Search" class="btn btn-outline-light" name="search_data_product">
-
 
       </form>
     </div>
@@ -88,3 +88,20 @@ include ('./functions/common_functions.php');
 <?php
 cart();
 ?>
+
+<!-- fourth child -->
+<div class="row">
+  <div class="col-md-10">
+    <!-- products -->
+    <div class="row">
+      <!--fetching products-->
+     <?php
+     search_product();
+     get_unique_categories();
+     get_unique_brands();
+    //  $ip = getIPAddress();  
+    //  echo 'User Real IP Address - '.$ip;
+      ?>
+    </div>
+    </div>
+</div>
