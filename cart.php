@@ -100,14 +100,14 @@ cart();
                         <th>Product Image</th>
                         <th>Quantity</th>
                         <th>Total Price</th>
-                        <th>Remove</th>
+                        <th>MarkS</th>
                         <th colspan="2">Operations</th>
                     </tr>
                 </thread>
                 <tbody>
                     <!-- php code to display dynamic data -->
                     <?php
-
+                        
                         $get_ip_add = getIPAddress();
                         $total_price = 0;
                         $cart_query = "Select * from cart_details where ip_address='$get_ip_add'";
@@ -122,24 +122,24 @@ cart();
                                 $product_title=$row_product_price['product_title'];
                                 $product_image1=$row_product_price['product_image1'];
                                 $product_values = array_sum($product_price);
-                                $total_price += $product_values;
-
+                                $total_price+=$product_values;
                     ?>
                     <tr>
                         <td><?php echo $product_title ?></td>
                         <td><img src="./images/<?php echo $product_image1 ?>" alt="" class="cart_image"></td>
                         <td><input type="text" name="qty" class="form-input w-50"></td>
                         <?php
-                        $get_ip_add = getIPAddress();
-                        if(isset($_POST['update_cart'])){
+                          $get_ip_add = getIPAddress();
+                          if(isset($_POST['update_cart'])){
                             $quantities = $_POST['qty'];
-                            $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add' ";
+                            //$quantities = (int) $quantities;
+                            $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add'";
                             $result_products_quantity = mysqli_query($con, $update_cart);
                             $total_price = $total_price * $quantities;
-                        }
+                          }
                         ?>
                         <td><?php echo $price_table ?>/-</td>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"><?php echo $product_values;?></td>
                         <td>
                             <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Update</button> -->
                             <input type="submit" value="Update Cart" class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8' name="update_cart">
@@ -157,8 +157,8 @@ cart();
             <!-- subtotal -->
             <div class="d-flex mb-5">
                 <h4 class="px-3">Subtotal:<strong><?php echo $total_price ?>/-</strong></h4>
-                <a href="products.php" class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Continue Shopping</a>
-                <a href="#" class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Checkout</a>
+                <a href="products.php"><button class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8'>Continue Shopping</button></a>
+                <a href="#"><button class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8'>Checkout</button></a>
             </div>
         </div>
   </div>
