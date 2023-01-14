@@ -100,7 +100,7 @@ cart();
                         <th>Product Image</th>
                         <th>Quantity</th>
                         <th>Total Price</th>
-                        <th>MarkS</th>
+                        <th>Select</th>
                         <th colspan="2">Operations</th>
                     </tr>
                 </thread>
@@ -139,7 +139,7 @@ cart();
                           }
                         ?>
                         <td><?php echo $price_table ?>/-</td>
-                        <td><input type="checkbox"><?php echo $product_values;?></td>
+                        <td><input type="checkbox"></td>
                         <td>
                             <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Update</button> -->
                             <input type="submit" value="Update Cart" class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8' name="update_cart">
