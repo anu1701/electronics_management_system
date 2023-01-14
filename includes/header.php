@@ -18,31 +18,31 @@ include ('./functions/common_functions.php');
     <!--navbar-->
     <div class="container-fluid p-0">
         <!--first child-->
-  <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #D09CFA;">
+  <nav class="navbar navbar-expand-lg "  style="background-color: #000000">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="./images/logo0.png"alt="" width=50 height=50></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">  
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active navbar-light" style="color:#7b70b7" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.php">About</a>
+          <a class="nav-link navbar-light" style="color:#7b70b7" href="about.php">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="products.php">Products</a>
+          <a class="nav-link navbar-light" style="color:#7b70b7" href="products.php">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact_us.php">Contact Us</a>
+          <a class="nav-link navbar-light" style="color:#7b70b7" href="contact_us.php">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+          <a class="nav-link navbar-light" style="color:#7b70b7" href="#">Register</a>
         </li>
         <li class="nav-item-2">
-          <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping fa-lg" ></i>
+          <a class="nav-link navbar-light" style="color:#7b70b7" href="cart.php"><i class="fa-solid fa-cart-shopping fa-lg" ></i>
           <sup>
             <?php
               cart_item();
@@ -51,7 +51,7 @@ include ('./functions/common_functions.php');
         </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Total Price:<?php total_cart_price(); ?>/-</a>
+          <a class="nav-link navbar-light" style="color:#7b70b7" style="color:#7b70b7" href="#">Total Price:<?php total_cart_price(); ?>/-</a>
         </li>
       </ul>
       <form class="d-flex" action="search_product.php" method="get">
@@ -61,7 +61,7 @@ include ('./functions/common_functions.php');
                     </button>-->
                     <!-- <input type="submit" value=search> -->
                     <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
-                    <input type="submit" value="Search" class="btn btn-outline-light" name="search_data_product">
+                    <input type="submit" value="Search" class="btn" style="color:#7b70b7" name="search_data_product">
 
 
       </form>

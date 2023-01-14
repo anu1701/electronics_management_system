@@ -21,6 +21,8 @@
     width: 100px;
     object-fit:contain;
 } */
+/*hero section*/
+
 /*footer*/
 p{
     font-size: 15px;
@@ -32,6 +34,9 @@ p{
 }
 img{
     max-width: 100%;
+}
+.nav-link a .nav-item .nav-light{
+    color:#7b70b7;
 }
 a{
     text-decoration: none;

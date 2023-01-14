@@ -139,11 +139,14 @@ cart();
                           }
                         ?>
                         <td><?php echo $price_table ?>/-</td>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" name="removeitem[]" value="<?php
+                        echo $product_id
+                        ?>"></td>
                         <td>
                             <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Update</button> -->
                             <input type="submit" value="Update Cart" class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8' name="update_cart">
-                            <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Remove</button>
+                           <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Remove</button>-->
+                           <input type="submit" value="Remove" class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8' name="remove_cart">
                         </td>
                     </tr>
 
@@ -163,6 +166,23 @@ cart();
         </div>
   </div>
   </form>
+  <!--function to remove items-->
+  <?php
+  function remove_cart_item(){
+    global $con;
+    if(isset($_POST['remove_cart'])){
+      foreach($_POST['removeitem'] as $remove_id){{
+        echo $remove_id;
+        $delete_query="Delete  from cart_details where product_id=$remove_id";
+        $run_delete=mysqli_query($con,$delete_query);
+        if($run_delete){
+          echo "<script>window.open('cart.php','_self')</script>";
+        }
+      }}
+    }
+  }
+  echo $removeitem= remove_cart_item();
+  ?>
 
   <!-- include footer -->
   <?php
