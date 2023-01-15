@@ -22,6 +22,7 @@
     box-shadow:0 0 40px 20px rgba(0, 0, 0, 0.658);
     font-family:"Josefin Sans","sans-serif";
     perspective: 1000px;
+    
 }
 .inner-box{
     position: relative;
@@ -63,11 +64,11 @@
     box-sizing:border-box;
     outline: none;
     text-align: center;
-    color: #7579E7;
+    color: #93cf;
     font-family:"Josefin Sans","sans-serif";
 }
 ::placeholder{
-    color:#9AB3F5;
+    color:#93cf;
     font-size: 18px;
 }
 button{
@@ -114,7 +115,7 @@ span:hover{
     margin-top:50px;
 }
 .card1 a{
-    color:#9AB3F5;
+    color:#bfc7dc;
     text-decoration: none;
     display: block;
     text-align:center;
@@ -123,4 +124,15 @@ span:hover{
 }
 .card1 a:hover{
     color: #AE00FB;
+}
+label{
+    cursor: pointer;
+    color: #93cf;
+    justify-content: center;
+    border-radius: 90%;
+    display: flex;
+   
+}
+input[type="file"]{
+    opacity: 0;
 }
