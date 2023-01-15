@@ -214,6 +214,8 @@ cart();
         </div>
   </div>
   </form>
+
+  
   <!--function to remove items-->
   <?php
   function remove_cart_item(){
