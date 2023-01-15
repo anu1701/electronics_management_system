@@ -2,8 +2,10 @@
 include('includes/connect.php')
 ?>
 <?php
-include('functions/common_functions.php')
+include('functions/common_functions.php');
 ?>
+<?php
+@session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,20 +125,22 @@ if(isset($_POST['user_login'])){
     $row_data=mysqli_fetch_assoc($result);
     $user_ip=getIPAddress();
     //cartitem
-    $select_query_cart="select * from cart_details where 
-    ip_address='$user_ip'";
+    $select_query_cart="select * from cart_details where ip_address='$user_ip'"  ;
     $select_cart=mysqli_query($con,$select_query_cart);
      $rows_count_cart=mysqli_num_rows($select_cart);
     if($row_count>0){
+        $_SESSION['username']=$name;
         if(password_verify($password,$row_data['user_password'])){
           //  echo "<script>alert('You have logged in successfully')</script>";
-          if($row_count==1 and $row_count_cart==0){
+          if($row_count_cart==1 && $row_count==1 ){
+            $_SESSION['username']=$name;
           echo "<script>alert('You have logged in successfully')</script>";
-          echo "<script>window.open('profile.php','_self')</script>";
+          echo "<script>window.open('payment.php','_self')</script>";
           
         }else{
+            $_SESSION['username']=$name;
             echo "<script>alert('You have logged in successfully')</script>";
-          echo "<script>window.open('payment.php','_self')</script>";
+          echo "<script>window.open('profile.php','_self')</script>";
         }
      } else{
             echo "<script>alert('invalid credentials')</script>";

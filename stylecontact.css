@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    background: #000718; 
+    background: #000718;
+    overflow-x: hidden; 
 }
 body, input,textarea, a{
     font-family: 'Roboto', sans-serif;
