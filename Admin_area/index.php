@@ -32,7 +32,7 @@ include('../functions/common_functions.php');
         overflow-x:hidden;
     }
     .product_img{
-        width:15%;
+        width:100px;
         object-fit: contain;
     }
     </style>
@@ -95,6 +95,9 @@ include('../functions/common_functions.php');
         }
         if(isset($_GET['view_products'])){
                 include('view_products.php');
+        }
+        if (isset($_GET['edit_products'])) {
+            include('edit_products.php');
         }
         ?>
     </div>
