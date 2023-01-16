@@ -132,15 +132,15 @@ if(isset($_POST['user_login'])){
         $_SESSION['username']=$name;
         if(password_verify($password,$row_data['user_password'])){
           //  echo "<script>alert('You have logged in successfully')</script>";
-          if($row_count_cart==1 && $row_count==1 ){
+          if($row_count_cart==0 and $row_count==1 ){
             $_SESSION['username']=$name;
           echo "<script>alert('You have logged in successfully')</script>";
-          echo "<script>window.open('payment.php','_self')</script>";
+          echo "<script>window.open('profile.php','_self')</script>";
           
         }else{
             $_SESSION['username']=$name;
             echo "<script>alert('You have logged in successfully')</script>";
-          echo "<script>window.open('profile.php','_self')</script>";
+          echo "<script>window.open('payment.php','_self')</script>";
         }
      } else{
             echo "<script>alert('invalid credentials')</script>";
