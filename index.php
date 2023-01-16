@@ -35,7 +35,7 @@
                <p><h3 class="heading-3">We provide you with quality gadgets at its finest!!</h3>
     
                
-                    <a href=""><button class="btn">shop now
+                    <a href="products.php"><button class="btn">shop now
                     </button></a>
                 </p>
                 

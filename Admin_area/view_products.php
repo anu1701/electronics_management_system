@@ -31,7 +31,7 @@
             <td><img src='./product_images/<?php echo $product_image1; ?>' class='product_img'/></td>
             <td><?php echo $product_price; ?>/-</td>
             <td><?php
-            $get_count = "Select * from orders_pending where product_id=$product_id";
+            $get_count = "Select * from pending_orders where product_id=$product_id";
             $result_count = mysqli_query($con, $get_count);
             $rows_count = mysqli_num_rows($result_count);
             echo $rows_count;
