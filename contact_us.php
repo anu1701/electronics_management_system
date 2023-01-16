@@ -1,8 +1,11 @@
 <?php
-$title='Contact us';
-$page='contact';
-include('./includes/header.php');
+include('includes/header.php');
 ?>
+<style>
+  body{
+    overflow-x:"hidden";
+  }
+</style>
 
  <link rel="stylesheet" href="stylecontact.css">
  <section id="section-wrapper">
