@@ -1,5 +1,5 @@
 <?php
-include('includes/connect.php')
+include('includes/connect.php');
 ?>
 <?php
 include('functions/common_functions.php');
