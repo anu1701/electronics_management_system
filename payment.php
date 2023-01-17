@@ -31,8 +31,9 @@ include('functions/common_functions.php');
     $user_ip= getIPAddress();
     $get_user1="select * from user where user_ip='$user_ip'";
     $result1=mysqli_query($con,$get_user1);
-    $run_query=mysqli_fetch_assoc($result1);
+    $run_query=mysqli_fetch_array($result1);
     $user_id=$run_query['user_id'];
+    
     ?>
    <div class="container">
     <h2 class="text-center" style="color:#7b70b7">Payment Options</h2>
