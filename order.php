@@ -36,8 +36,7 @@ if($quantity==0){
        $quantity=$quantity;
        $subtotal= $total_price * $quantity;
  }
-$insert_orders="insert into user_orders (user_id,
-amount_due,invoice_number,total_products,order_date,order_status) values ( $user_id, $subtotal,$invoice_number,$count_products,NOW(),'$status')";
+$insert_orders="insert into user_orders (user_id,amount_due,invoice_number,total_products,order_date,order_status) values ( $user_id, $subtotal,$invoice_number,$count_products,NOW(),'$status')";
 $result_query=mysqli_query($con,$insert_orders);
 if($result_query){
     echo "<script>alert('orders are submitted successfully)</script>";

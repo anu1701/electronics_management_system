@@ -31,10 +31,10 @@ include('functions/common_functions.php');
     $user_ip= getIPAddress();
     $get_user1="select * from user where user_ip='$user_ip'";
     $result1=mysqli_query($con,$get_user1);
-    $run_query=mysqli_fetch_array($result1);
+    while($run_query=mysqli_fetch_array($result1)){
     $user_id=$run_query['user_id'];
-    
     ?>
+      <?php } ?>
    <div class="container">
     <h2 class="text-center" style="color:#7b70b7">Payment Options</h2>
     <div class="row d-flex justify-content-center align-items-center my-5">
@@ -43,11 +43,11 @@ include('functions/common_functions.php');
         <a href="https://www.paypal.com/" target="_blank"><img src="./images/pay1.jpg" alt=" " class=img></a>
         </div>
         <div class="col-md-6">
-        <a href="order.php?user_id=<?php echo $user_id?>" ><img src="./images/pay2.jpg" alt="" class=img></a>
+        <a href="order.php?user_id=<?php echo $run_query?>" ><img src="./images/pay2.jpg" alt="" class=img></a>
         </div>
 
     </div>
-    
+  
 
 
 
