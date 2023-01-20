@@ -20,14 +20,7 @@ if(isset($_GET['edit_products'])){
     $result_category = mysqli_query($con,$select_category);
     while($row_category = mysqli_fetch_assoc($result_category)){
     $category_title = $row_category['category_title'];
-<<<<<<< HEAD
-    // error_reporting(E_ERROR | E_PARSE);
-    //echo $category_title;
 
-=======
-    }
-    
->>>>>>> 98c35d9b0a3627d0490eec5d4cdcbb60c9827816
     //fetching brands name
     $select_brand = "Select * from brands where brand_id=$brand_id";
     $result_brand = mysqli_query($con, $select_brand);
@@ -135,5 +128,5 @@ if(isset($_POST['edit_product'])){
         }
     }
 }
-
+}
 ?>
