@@ -18,22 +18,25 @@ if(isset($_GET['edit_products'])){
     //fetching category name
     $select_category = "Select * from categories where category_id=$category_id";
     $result_category = mysqli_query($con,$select_category);
-    $row_category = mysqli_fetch_assoc($result_category);
+    while($row_category = mysqli_fetch_assoc($result_category)){
     $category_title = $row_category['category_title'];
+<<<<<<< HEAD
     // error_reporting(E_ERROR | E_PARSE);
     //echo $category_title;
 
+=======
+    }
+    
+>>>>>>> 98c35d9b0a3627d0490eec5d4cdcbb60c9827816
     //fetching brands name
     $select_brand = "Select * from brands where brand_id=$brand_id";
     $result_brand = mysqli_query($con, $select_brand);
-    $row_brand = mysqli_fetch_assoc($result_brand);
+    while($row_brand = mysqli_fetch_assoc($result_brand)){
     $brand_title = $row_brand['brand_title'];
     // error_reporting(E_ERROR | E_PARSE);
     //echo $brand_title;
-
-}
+}}
 ?>
-
 
 <div class="container mt-5">
     <h1 class="text-center">Edit Product</h1>
