@@ -20,6 +20,7 @@ if(isset($_GET['edit_products'])){
     $result_category = mysqli_query($con,$select_category);
     $row_category = mysqli_fetch_assoc($result_category);
     $category_title = $row_category['category_title'];
+    // error_reporting(E_ERROR | E_PARSE);
     //echo $category_title;
 
     //fetching brands name
@@ -27,6 +28,7 @@ if(isset($_GET['edit_products'])){
     $result_brand = mysqli_query($con, $select_brand);
     $row_brand = mysqli_fetch_assoc($result_brand);
     $brand_title = $row_brand['brand_title'];
+    // error_reporting(E_ERROR | E_PARSE);
     //echo $brand_title;
 
 }
@@ -81,6 +83,7 @@ if(isset($_GET['edit_products'])){
 
                 ?>
             </select>
+
         </div>
         <div class="form-outline w-50 m-auto mb-4">
             <label for="product_image1" class="form-label">Product Image1</label>
@@ -118,9 +121,10 @@ if(isset($_POST['edit_product'])){
         echo "<script>alert('Please fill all the fields and continue the process')</scripts>";
     }else{
         move_uploaded_file($temp_image1, "./product_images/$product_image1");
+          
 
         //query to update products
-        $update_product = "update products set product_title='$product_title',product_description='$product_desc',product_keywords='$product_keywords',category_id='$product_category',brand_id='$product_brands',product_image1='$product_image1',product_price='$product_price',date=NOW() where product_id=$edit_id";
+        $update_product = "update products set product_title='$product_title',product_description='$product_desc',product_keywords='$product_keywords',category_id='$category_id',brand_id='$brand_id',product_image1='$product_image1',product_price='$product_price',date=NOW() where product_id=$edit_id";
         $result_update = mysqli_query($con, $update_product);
         if($result_update){
             echo "<script>alert('Product updated successfully')</scripts>";
