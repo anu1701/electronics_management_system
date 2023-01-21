@@ -3,7 +3,7 @@ include ('./functions/common_functions.php');
 include('includes/connect.php');
 if(isset($_GET['user_id'])){
    $user_id=$_GET['user_id'] ;
-   echo "$user_id";
+
 }
 //getting total items and total price of all items
 $get_ip_address=getIPAddress();
@@ -42,4 +42,11 @@ if($result_query){
     echo "<script>alert('orders are submitted successfully)</script>";
     echo "<script>window.open('profile.php','_self')</script>";
 }
+//orders pending
+$insert_pending_orders="insert into pending_orders (user_id,invoice_number,product_id,quantity,order_status) values ( $user_id,$invoice_number,$product_id, $quantity,'$status')";
+$result_pending_orders=mysqli_query($con,$insert_pending_orders);
+//delete items from cart
+$empty_cart="delete from cart_details where ip_address='$get_ip_address'";
+$result_delete=mysqli_query($con,$empty_cart);
+
 ?>
