@@ -72,9 +72,9 @@ include('../includes/connect.php');
                     <button ><a href="insert_product.php" class="nav-link text-light  " style="background-color:#4F3B78">Insert Products</a></button>
                     <button><a href="index.php?view_products" class="nav-link text-light  " style=background-color:#4F3B78>View Products</a></button>
                     <button><a href="index.php?insert_category" class="nav-link text-light " style=background-color:#4F3B78>Insert Categories</a></button>
-                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>View Categories</a></button>
+                    <button><a href="index.php?view_categories" class="nav-link text-light " style=background-color:#4F3B78>View Categories</a></button>
                     <button><a href="index.php?insert_brand" class="nav-link text-light " style="background-color:#4F3B78">Insert Brands</a></button>
-                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>View Brands</a></button>
+                    <button><a href="index.php?view_brands" class="nav-link text-light " style=background-color:#4F3B78>View Brands</a></button>
                     <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>All Orders</a></button>
                     <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>All Payments</a></button>
                     <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>List Users</a></button>
@@ -98,6 +98,15 @@ include('../includes/connect.php');
         }
         if (isset($_GET['edit_products'])) {
             include('edit_products.php');
+        }
+        if (isset($_GET['delete_product'])) {
+            include('delete_product.php');
+        }
+        if (isset($_GET['view_categories'])) {
+            include('view_categories.php');
+        }
+        if (isset($_GET['view_brands'])) {
+            include('view_brands.php');
         }
         ?>
     </div>
