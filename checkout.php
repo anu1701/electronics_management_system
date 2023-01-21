@@ -11,7 +11,7 @@
 }
 
   body{
-    overflow-x:"hidden";
+    overflow-X:"hidden";
   }
 
 
