@@ -3,7 +3,7 @@ include ('./functions/common_functions.php');
 include('includes/connect.php');
 if(isset($_GET['user_id'])){
    $user_id=$_GET['user_id'] ;
-   echo "$user_id";
+
 }
 //getting total items and total price of all items
 $get_ip_address=getIPAddress();

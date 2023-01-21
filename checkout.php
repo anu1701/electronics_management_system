@@ -38,9 +38,7 @@
         <li class="nav-item">
           <a class="nav-link navbar-light" style="color:#7b70b7" href="contact_us.php">Contact Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link navbar-light" style="color:#7b70b7" href="user_login.php">Register</a>
-        </li>
+        
       </ul>
       <form class="d-flex" action="search_product.php" method="get">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">

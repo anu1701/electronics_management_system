@@ -54,11 +54,11 @@ if(isset($_GET['edit_products'])){
                 //fetching category name
                 $select_category_all = "Select * from categories";
                 $result_category_all = mysqli_query($con,  $select_category_all);
-                while($row_category_all = mysqli_fetch_assoc($result_category_all)){
+                $row_category_all = mysqli_fetch_assoc($result_category_all);
                     $category_title = $row_category_all['category_title'];
                     $category_id = $row_category_all['category_id'];
                     echo "<option value='$category_id'>$category_title</option>";
-                }
+                
 
                 ?>
             </select>
@@ -71,11 +71,11 @@ if(isset($_GET['edit_products'])){
                 //fetching brand name
                 $select_brand_all = "Select * from brands";
                 $result_brand_all = mysqli_query($con, $select_brand_all);
-                while($row_brand_all = mysqli_fetch_assoc($result_brand_all)){
+                $row_brand_all = mysqli_fetch_assoc($result_brand_all);
                     $brand_title = $row_brand_all['brand_title'];
                     $brand_id = $row_brand_all['brand_id'];
                     echo "<option value='$brand_id'>$brand_title</option>";
-                }
+                
 
                 ?>
             </select>

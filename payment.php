@@ -26,15 +26,32 @@ include('functions/common_functions.php');
 </head>
 
 <body>
-    <?php
+    <!--<?php
     //php code to access user id
-    $user_ip= getIPAddress();
-    $get_user1="select * from user where user_ip='$user_ip'";
-    $result1=mysqli_query($con,$get_user1);
-    while($run_query=mysqli_fetch_assoc($result1)){
-    $user_id=$run_query['user_id'];
-    ?>
-      <?php } ?>
+    // global $con;
+    // $user_ip= getIPAddress();
+    // $get_user1="select * from user where user_ip='$user_ip'";
+    // $result1=mysqli_query($con,$get_user1);
+    //  if(!$result1){
+    //      die(mysqli_connect_error());
+    // }
+        
+//  if (mysqli_num_rows($result1) >0) {
+// / while($rowData = mysqli_fetch_array($result1)){
+//   	// 	echo $rowData["user_id"].'<br>';
+// 	// }}
+//      while($run_query=mysqli_fetch_array($result1)){
+ 
+//     $user_id=$run_query['user_id'];
+// }}
+//$id=1;
+//     }
+//    $row1 = mysqli_fetch_array($result1);
+//      echo $result1;
+  // $row1 = $result1->fetch_array()['user'] ?? '';
+//    $user_id=$row1['user_id'];
+     //echo $row1;
+?>-->
    <div class="container">
     <h2 class="text-center" style="color:#7b70b7">Payment Options</h2>
     <div class="row d-flex justify-content-center align-items-center my-5">
@@ -43,8 +60,8 @@ include('functions/common_functions.php');
         <a href="https://www.paypal.com/" target="_blank"><img src="./images/pay1.jpg" alt=" " class=img></a>
         </div>
         <div class="col-md-6">
-        <a href="order.php?user_id=<?php echo $run_query?>" ><img src="./images/pay2.jpg" alt="" class=img></a>
-        </div>
+        <a href="order.php?user_id=1" ><img src="./images/pay2.jpg" alt="" class=img></a>
+        </div> 
 
     </div>
   
@@ -52,5 +69,9 @@ include('functions/common_functions.php');
 
 
    </div>
+
 </body>
 </html>
+<!-- while ($row = $result->fetch_assoc()) {
+    echo $row['classtype']."<br>";
+} -->
