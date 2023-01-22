@@ -2,6 +2,7 @@
 <?php
 include('../includes/connect.php');
 // include('../functions/common_functions.php');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -30,12 +31,20 @@ include('../includes/connect.php');
     }
     body{
         overflow-x:hidden;
+        
     }
     .product_img{
         width:100px;
         height: 75px;
         object-fit: contain;
     }
+    .btnb{
+        margin-left: 10px; 
+        margin-top:10px;
+        width:720px;
+        height:30px;
+       }
+    
     </style>
 
 </head>
@@ -49,7 +58,7 @@ include('../includes/connect.php');
                 <nav class="navbar navbar-expand-lg">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Welcome guest</a>
+                            <a href="" class="nav-link">Welcome Guest</a>
                         </li>
                     </ul>
                 </nav>
@@ -63,24 +72,23 @@ include('../includes/connect.php');
 
         <!-- third child -->
         <div class="row">
-            <div class="col-md-12 p-1 d-flex align-items-center" style="background-color:#D09CFA">
-                <div class="p-3">
+            <div class="col-md-12 p-5 px-5 py-5 d-flex align-items-center" style="background-color:#D09CFA">
+                <!-- <div class="p-3">
                     <a href="#"><img src="../images/admin.jpg" alt="" class="admin_image"></a>
                     <p class="text-light text-center">Admin Name</p>
+                </div> -->
+                <div class="button text-center" style="margin-left:40px;">
+                    <button class="btnb" ><a href="insert_product.php" class="nav-link text-light  " style="background-color:#4F3B78">Insert Products</a></button>
+                    <button class="btnb"><a href="index.php?view_products" class="nav-link text-light  " style=background-color:#4F3B78>View Products</a></button>
+                    <button class="btnb"><a href="index.php?insert_category" class="nav-link text-light " style=background-color:#4F3B78>Insert Categories</a></button>
+                    <button class="btnb"><a href="index.php?view_categories" class="nav-link text-light " style=background-color:#4F3B78>View Categories</a></button>
+                    <button class="btnb"><a href="index.php?insert_brand" class="nav-link text-light " style="background-color:#4F3B78">Insert Brands</a></button>
+                    <button class="btnb"><a href="index.php?view_brands" class="nav-link text-light " style=background-color:#4F3B78>View Brands</a></button>
+                    <button class="btnb"><a href="index.php?list_orders" class="nav-link text-light " style=background-color:#4F3B78>All Orders</a></button>
+                    <button class="btnb"><a href="index.php?list_payments" class="nav-link text-light " style=background-color:#4F3B78>All Payments</a></button>
+                    <button class="btnb"><a href="index.php?list_users" class="nav-link text-light " style=background-color:#4F3B78>List Users</a></button>
+                    <button class="btnb"><a href="admin_logout.php" class="nav-link text-light" style=background-color:#4F3B78>Logout</a></button>
                 </div>
-                <!-- button*10>a.nav-linl.text-light.bg-info.my-1 -->
-                <div class="button text-center">
-                    <button ><a href="insert_product.php" class="nav-link text-light  " style="background-color:#4F3B78">Insert Products</a></button>
-                    <button><a href="index.php?view_products" class="nav-link text-light  " style=background-color:#4F3B78>View Products</a></button>
-                    <button><a href="index.php?insert_category" class="nav-link text-light " style=background-color:#4F3B78>Insert Categories</a></button>
-                    <button><a href="index.php?view_categories" class="nav-link text-light " style=background-color:#4F3B78>View Categories</a></button>
-                    <button><a href="index.php?insert_brand" class="nav-link text-light " style="background-color:#4F3B78">Insert Brands</a></button>
-                    <button><a href="index.php?view_brands" class="nav-link text-light " style=background-color:#4F3B78>View Brands</a></button>
-                    <button><a href="index.php?list_orders" class="nav-link text-light " style=background-color:#4F3B78>All Orders</a></button>
-                    <button><a href="index.php?list_payments" class="nav-link text-light " style=background-color:#4F3B78>All Payments</a></button>
-                    <button><a href="index.php?list_users" class="nav-link text-light " style=background-color:#4F3B78>List Users</a></button>
-                    <button><a href="" class="nav-link text-light" style=background-color:#4F3B78>Logout</a></button>
-            </div>
         </div>
     </div>
 
