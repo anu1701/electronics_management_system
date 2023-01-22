@@ -33,6 +33,7 @@ include('../includes/connect.php');
     }
     .product_img{
         width:100px;
+        height: 75px;
         object-fit: contain;
     }
     </style>
@@ -75,9 +76,9 @@ include('../includes/connect.php');
                     <button><a href="index.php?view_categories" class="nav-link text-light " style=background-color:#4F3B78>View Categories</a></button>
                     <button><a href="index.php?insert_brand" class="nav-link text-light " style="background-color:#4F3B78">Insert Brands</a></button>
                     <button><a href="index.php?view_brands" class="nav-link text-light " style=background-color:#4F3B78>View Brands</a></button>
-                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>All Orders</a></button>
-                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>All Payments</a></button>
-                    <button><a href="" class="nav-link text-light " style=background-color:#4F3B78>List Users</a></button>
+                    <button><a href="index.php?list_orders" class="nav-link text-light " style=background-color:#4F3B78>All Orders</a></button>
+                    <button><a href="index.php?list_payments" class="nav-link text-light " style=background-color:#4F3B78>All Payments</a></button>
+                    <button><a href="index.php?list_users" class="nav-link text-light " style=background-color:#4F3B78>List Users</a></button>
                     <button><a href="" class="nav-link text-light" style=background-color:#4F3B78>Logout</a></button>
             </div>
         </div>
@@ -120,6 +121,16 @@ include('../includes/connect.php');
         if (isset($_GET['delete_brands'])) {
             include('delete_brands.php');
         }
+        if (isset($_GET['list_orders'])) {
+            include('list_orders.php');
+        }
+        if (isset($_GET['list_payments'])) {
+            include('list_payments.php');
+        }
+        if (isset($_GET['list_users'])) {
+            include('list_users.php');
+        }
+
         ?>
     </div>
 
