@@ -14,7 +14,9 @@ include('includes/connect.php');
     <!--bootstrap css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--font awesome cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
     .pf_img{
@@ -115,7 +117,7 @@ include('includes/connect.php');
   <!--fourth child-->
   <div class="row">
     <div class="col-md-2 ">
-        <ul class="navbar-nav text-center" style=" background-color:#B8B5FF">
+        <ul class="navbar-nav text-center" style="background-color:#B8B5FF">
         <li class="nav-item">
           <a class="nav-link navbar-light text-dark" style="background-color:#B8B5FF" href="#">
           <h4>Your Profile</h4></a>
@@ -156,6 +158,12 @@ include('includes/connect.php');
     <div class="col-md-10">
         <?php 
         getuserorder_details();
+        if(isset($_GET['edit_account'])){
+            include('edit_account.php');
+        }
+        if(isset($_GET['my_orders'])){
+            include('user_orders.php');
+        }
         ?>
     </div>
   </div>

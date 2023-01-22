@@ -275,7 +275,7 @@ function getuserorder_details(){
         </a></h5></p>";
           }else{
             echo "<h3 class='text-center text-success my-5' >You have 0 pending orders</h3>
-            <p><h5 class='text-center text-decoration:none'><a href='./index.php'style='color:#3D1766'>Explore Products
+            <p><h5 class='text-center text-decoration:none'><img src='./images/explore.png'><a href='./index.php'style='color:#3D1766'>Explore Products
               </a></h5></p>";
           }
         }

@@ -55,6 +55,20 @@ include ('functions/common_functions.php');
         <li class="nav-item">
           <a class="nav-link"style="color:#7b70b7" href="contact_us.php">Contact Us</a>
         </li>
+        <?php
+        if(isset($_SESSION['username'])){
+          echo "<li class='nav-item'>
+          <a class='nav-link navbar-light'style='color:#7b70b7' href='profile.php'>My Account</a>
+        </li> ";}
+        else{
+          echo"
+          <li class='nav-item'>
+          <a class='nav-link navbar-light' style='color:#7b70b7' href='user_login.php'>Register</a>
+        </li> ";
+        }
+          
+      
+        ?>
         <li class="nav-item-2">
           <a class="nav-link" style="color:#7b70b7"  href="cart.php"><i class="fa-solid fa-cart-shopping fa-lg" ></i>
           <sup>
