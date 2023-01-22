@@ -22,7 +22,7 @@ while($row_price=mysqli_fetch_array($result_cart_price)){
         $product_price=array($row_product_price['product_price']);
         $product_values=array_sum($product_price);
         $total_price+=$product_values;
-}}
+}
 // getting quantity from cart
 $get_cart="select * from cart_details";
 $run_cart=mysqli_query($con,$get_cart);//execute
@@ -48,5 +48,5 @@ $result_pending_orders=mysqli_query($con,$insert_pending_orders);
 //delete items from cart
 $empty_cart="delete from cart_details where ip_address='$get_ip_address'";
 $result_delete=mysqli_query($con,$empty_cart);
-
+}
 ?>

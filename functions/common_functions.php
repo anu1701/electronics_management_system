@@ -28,7 +28,7 @@ function getproducts()
                   <p class='card-text'>$product_description</p>
                   <p class='card-text'>Price: $product_price/-</p>
                         <a href='products.php?add_to_cart= $product_id' class='btn btn-light' style='background-color:#810CA8'>Add to cart</a>
-                       <a href='#' class='btn btn-secondary'>View more</a>
+                      
              </div>
         </div>
       </div>";
@@ -169,7 +169,7 @@ function search_product()
                   <p class='card-text'>$product_description</p>
                   <p class='card-text'>Price: $product_price/-</p>
                         <a href='products.php?add_to_cart= $product_id' class='btn btn-light' style='background-color:#810CA8'>Add to cart</a>
-                       <a href='#' class='btn btn-secondary'>View more</a>
+                       
              </div>
         </div>
       </div>";
@@ -254,6 +254,36 @@ function total_cart_price(){
     }
   }
   echo $total_price;
+}
+//get user order details
+function getuserorder_details(){
+  global $con;
+  $user_name=  $_SESSION['username'];
+  $get_details="select * from user where user_name='$user_name'";
+  $result_query=mysqli_query($con,$get_details);
+  while($row_query=mysqli_fetch_array( $result_query)){
+    $user_id=$row_query['user_id'];
+    if(!isset($_GET['edit_account'])){
+      if(!isset($_GET['my_orders'])){
+        if(!isset($_GET['delete_account'])){
+          $get_orders="select * from user_orders where user_id= $user_id and order_status='pending'";
+          $result_orders_query=mysqli_query($con,$get_orders);
+          $row_count=mysqli_num_rows( $result_orders_query);
+          if($row_count>0){
+            echo "<h3 class='text-center text-success my-5' >You have <span  class='text-danger'>$row_count</span>pending orders</h3>
+      <p><h5 class='text-center text-decoration:none'><a href='profile.php?my_orders'style='color:#3D1766'>Order Details
+        </a></h5></p>";
+          }else{
+            echo "<h3 class='text-center text-success my-5' >You have 0 pending orders</h3>
+            <p><h5 class='text-center text-decoration:none'><a href='./index.php'style='color:#3D1766'>Explore Products
+              </a></h5></p>";
+          }
+        }
+      }
+    }
+  }
+
+
 }
 ?>
 

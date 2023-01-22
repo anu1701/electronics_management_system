@@ -92,7 +92,7 @@ include('includes/connect.php');
           ";
         }else{
           echo " <li class='nav-item'>
-          <a class='nav-link' href='#'>Welcome ".$_SESSION['username']." </a>
+          <a class='nav-link' href='profile.php'>Welcome ".$_SESSION['username']." </a>
         </li>";
 
         }

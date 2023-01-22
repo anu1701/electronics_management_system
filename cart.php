@@ -35,7 +35,7 @@ include ('functions/common_functions.php');
     <!--navbar-->
     <div class="container-fluid p-0">
         <!--first child-->
-  <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #D09CFA;">
+  <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #000000;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="./images/logo0.png"alt="" width=50 height=50></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,22 +44,19 @@ include ('functions/common_functions.php');
       <div class="collapse navbar-collapse" id="navbarSupportedContent">  
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" style="color:#7b70b7" aria-current="page" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.php">About</a>
+          <a class="nav-link" style="color:#7b70b7" href="about.php">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="products.php">Products</a>
+          <a class="nav-link" style="color:#7b70b7" href="products.php">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact_us.php">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="user_login.php">Register</a>
+          <a class="nav-link"style="color:#7b70b7" href="contact_us.php">Contact Us</a>
         </li>
         <li class="nav-item-2">
-          <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping fa-lg" ></i>
+          <a class="nav-link" style="color:#7b70b7"  href="cart.php"><i class="fa-solid fa-cart-shopping fa-lg" ></i>
           <sup>
             <?php
               cart_item();
@@ -156,13 +153,13 @@ cart();
                     <tr>
                         <td><?php echo $product_title ?></td>
                         <td><img src="./images/<?php echo $product_image1 ?>" alt="" class="cart_image"></td>
-                        <td><input type="text" name="qty" class="form-input w-50"></td>
+                        <td><input type="number" name="quantity" class="form-input w-50" min="1" max="100" value="min"></td>
                         <?php
-                          $get_ip_add = getIPAddress();
+                          $update_cart = "update cart_details set quantity=1 where ip_address='$get_ip_add'";  
                           if(isset($_POST['update_cart'])){
-                            $quantities = $_POST['qty'];
+                            $quantities = $_POST['quantity'];
                             //$quantities = (int) $quantities;
-                            $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add'";
+                         $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add'";  
                             $result_products_quantity = mysqli_query($con, $update_cart);
                             $total_price = $total_price * $quantities;
                           }
