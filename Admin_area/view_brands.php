@@ -1,6 +1,6 @@
 <h3 class="text-center text-success">All Brands</h3>
 <table class=" table table-bordered mt-5">
-    <thead class="bg-info">
+    <thead style="background-color:#D09CFA;">
         <tr class="text-center">
             <th>Slno</th>
             <th>Brand title</th>

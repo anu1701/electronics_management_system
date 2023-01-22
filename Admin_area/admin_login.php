@@ -1,3 +1,7 @@
+<?php
+include('../includes/connect.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,3 +47,30 @@
     </div>
 </body>
 </html>
+
+<!-- php code -->
+<?php
+
+if(isset($_POST['admin_login'])){
+    $username = $_POST['username']; 
+    $password = $_POST['password']; 
+
+    //select query
+    $select_query = "Select * from admin where admin_name='$username'";
+    $result = mysqli_query($con, $select_query);
+    $row_count = mysqli_num_rows($result);
+    $row_data = mysqli_fetch_assoc($result);
+    if($row_count>0){
+        if(password_verify($password,$row_data['admin_password'])){
+            echo "<script>alert('Login Successful')</script>";  
+            echo '<script>window.location.href = "index.php";</script>';
+        }else{
+            echo "<script>alert('Invalid Credentials!!')</script>";
+        }
+    }else{
+        echo "<script>alert('Invalid Credentials!!')</script>";
+    }
+}
+
+
+?>

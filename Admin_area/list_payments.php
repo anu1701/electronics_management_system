@@ -1,6 +1,6 @@
 <h3 class="text-center text-success">All Payments</h3>
 <table class="table table-bordered mt-5">
-    <thead class="bg-info">
+    <thead style="background-color:#D09CFA;">
 
     <?php
     $get_payments = "Select * from user_payments";

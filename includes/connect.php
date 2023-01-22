@@ -1,6 +1,6 @@
 <?php
 $con = mysqli_connect('localhost', 'root', '', 'mystore');
-if(!$con){
+if (!$con) {
     die(mysqli_connect_error());
 }
 ?>
