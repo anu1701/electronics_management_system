@@ -21,7 +21,7 @@
     <th>Delete</th>
     </tr>
     </thead>
-    <tbody class='bg-secondary text-light text-center'>";
+    <tbody class=' text-dark text-center'>";
         $number = 0;
         while($row_data=mysqli_fetch_assoc($result)){
             $user_id = $row_data['user_id'];
@@ -38,7 +38,7 @@
             <td><img src='../user_images/$user_image' alt='$user_name' class='product_img'/></td>
             <td>$user_address</td>
             <td>$user_mobile</td>
-            <td><a href='' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
+            <td><a href='' class='text-dark'><i class='fa-solid fa-trash'></i></a></td>
             </tr>";
         }
     }

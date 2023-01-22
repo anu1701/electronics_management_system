@@ -1,6 +1,6 @@
 <h3 class="text-center text-success">All Products</h3>
 <table class=" table table-bordered mt-5">
-    <thead style="background-color:#D09CFA;">
+    <thead style="background-color:#A555EC;">
         <tr class="text-center">
             <th>Product ID</th>
             <th>Product Title</th>
@@ -12,7 +12,7 @@
             <th>Delete</th>
         </tr>
     </thead>
-    <tbody class="bg-secondary text-light">
+    <tbody class=" text-dark">
         <?php
         $get_products = "Select * from products";
         $result = mysqli_query($con, $get_products);
@@ -37,8 +37,8 @@
             echo $rows_count;
             ?></td>
             <td><?php echo $status; ?></td>
-            <td><a href='index.php?edit_products=<?php echo $product_id ?>' class='text-light'><i class='fa-solid fa-pen-to-square'></i></a></td>
-            <td><a href='index.php?delete_product=<?php echo $product_id ?>' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
+            <td><a href='index.php?edit_products=<?php echo $product_id ?>' class='text-dark'><i class='fa-solid fa-pen-to-square'></i></a></td>
+            <td><a href='index.php?delete_product=<?php echo $product_id ?>' class='text-dark'><i class='fa-solid fa-trash'></i></a></td>
         </tr>
         <?php
         }

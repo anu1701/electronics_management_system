@@ -82,7 +82,7 @@ if(isset($_POST['admin_registration'])){
          //insert query
     $insert_query = "insert into admin (admin_name,admin_email,admin_password) values ('$username',' $email','$hash_password')";
     $sql_execute = mysqli_query($con, $insert_query);
-    echo "<script>alert('Successfully logged in!')</script>";
+    echo "<script>alert('Registration successfull!')</script>";
     echo "<script>window.open('admin_login.php','_self')</script>";
     }
 }

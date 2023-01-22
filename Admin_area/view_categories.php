@@ -8,7 +8,7 @@
             <th>Delete</th>
         </tr>
     </thead>
-    <tbody class="bg-secondary text-light">
+    <tbody class=" text-dark">
     <?php
     $select_cat="Select * from categories";
     $result=mysqli_query($con,$select_cat);
@@ -22,8 +22,8 @@
         <tr class="text-center">
             <td><?php echo $number; ?></td>
             <td><?php echo $cartegory_title; ?></td>
-            <td><a href='index.php?edit_category=<?php echo $cartegory_id; ?>' class='text-light'><i class='fa-solid fa-pen-to-square'></i></a></td>
-            <td><a href='index.php?delete_category=<?php echo $cartegory_id; ?>' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
+            <td><a href='index.php?edit_category=<?php echo $cartegory_id; ?>' class='text-dark'><i class='fa-solid fa-pen-to-square'></i></a></td>
+            <td><a href='index.php?delete_category=<?php echo $cartegory_id; ?>' class='text-dark'><i class='fa-solid fa-trash'></i></a></td>
         </tr>
     <?php    
     }

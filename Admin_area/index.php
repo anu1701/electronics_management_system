@@ -44,13 +44,19 @@ session_start();
         width:720px;
         height:30px;
        }
+       th{
+        width:100vh;
+        height:15vh;
+        justify-content:center;
+       
+       }
     
     </style>
 
 </head>
 <body>
     <!-- navbar -->
-    <div class="container-fluid p-0">
+    <div class="container-fluid px-0">
         <!-- first child -->
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#D09CFA;">
             <div class="container-fluid">
@@ -71,13 +77,13 @@ session_start();
         </div>
 
         <!-- third child -->
-        <div class="row">
-            <div class="col-md-12 p-5 px-5 py-5 d-flex align-items-center" style="background-color:#D09CFA">
+        <!-- <div class="row">
+            <div class="col-md-12 p-5 px-5 py-5 d-flex align-items-center" style="background-color:#D09CFA"> -->
                 <!-- <div class="p-3">
                     <a href="#"><img src="../images/admin.jpg" alt="" class="admin_image"></a>
                     <p class="text-light text-center">Admin Name</p>
                 </div> -->
-                <div class="button text-center" style="margin-left:40px;">
+                <!-- <div class="button text-center" style="margin-left:40px;">
                     <button class="btnb" ><a href="insert_product.php" class="nav-link text-light  " style="background-color:#4F3B78">Insert Products</a></button>
                     <button class="btnb"><a href="index.php?view_products" class="nav-link text-light  " style=background-color:#4F3B78>View Products</a></button>
                     <button class="btnb"><a href="index.php?insert_category" class="nav-link text-light " style=background-color:#4F3B78>Insert Categories</a></button>
@@ -90,8 +96,32 @@ session_start();
                     <button class="btnb"><a href="admin_logout.php" class="nav-link text-light" style=background-color:#4F3B78>Logout</a></button>
                 </div>
         </div>
-    </div>
+    </div> -->
+     <div class="row">
+          <div class="col-md-12 " >
+                <!-- <div class="p-3">
+                    <a href="#"><img src="../images/admin.jpg" alt="" class="admin_image"></a>
+                    <p class="text-light text-center">Admin Name</p>
+                </div> -->
 
+                <div class=" text-center m-auto">
+                <table class="table table-bordered mt-5"><thead class="nav-link text-light  " style="background-color:#4F3B78"><tr>
+                   <th><a href="insert_product.php" class="nav-link text-light  " >Insert Products</a></th> 
+                   <th><a href="index.php?view_products" class="nav-link text-light  " >View Products</a></th> 
+                  <th><a href="index.php?insert_category" class="nav-link text-light " >Insert Categories</a></th>  
+                   <th> <a href="index.php?view_categories" class="nav-link text-light " >View Categories</a></th>
+                   <th><a href="index.php?insert_brand" class="nav-link text-light " >Insert Brands</a></th> 
+                    <th><a href="index.php?list_orders" class="nav-link text-light " >All Orders</a></th>
+                    <th><a href="index.php?list_payments" class="nav-link text-light " >All Payments</a></th>
+                    <th><a href="index.php?list_users" class="nav-link text-light ">List Users</a></th>
+                   <th><a href="admin_logout.php" class="nav-link text-light" >Logout</a>
+                   </th>
+                     </tr>
+                   </thead>
+                </table>
+                </div>
+        </div>
+    </div>
 
     <!-- fourth child -->
     <div class="container my-3">

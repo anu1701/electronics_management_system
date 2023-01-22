@@ -20,7 +20,7 @@
     <th>Delete</th>
     </tr>
     </thead>
-    <tbody class='bg-secondary text-light'>";
+    <tbody class='text-dark'>";
         $number = 0;
         while($row_data=mysqli_fetch_assoc($result)){
             $order_id = $row_data['order_id'];
@@ -36,7 +36,7 @@
             <td>$amount</td>
             <td>$payment_mode</td>
             <td>$date</td>
-            <td><a href='' class='text-light'><i class='fa-solid fa-trash'></i></a></td>
+            <td><a href='' class='text-dark'><i class='fa-solid fa-trash'></i></a></td>
             </tr>";
         }
     }
