@@ -171,7 +171,7 @@ cart();
                         <?php
                           $update_cart = "update cart_details set quantity=1 where ip_address='$get_ip_add'";  
                           if(isset($_POST['update_cart'])){
-                            $quantities = $_POST['quantity'];
+                      $quantities = $_POST['quantity'];
                             //$quantities = (int) $quantities;
                          $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add'";  
                             $result_products_quantity = mysqli_query($con, $update_cart);

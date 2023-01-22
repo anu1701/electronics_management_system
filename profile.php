@@ -62,9 +62,9 @@ include('includes/connect.php');
           </sup>
         </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link navbar-light" style="color:#7b70b7" style="color:#7b70b7" href="#">Total Price:<?php total_cart_price(); ?>/-</a>
-        </li>
+        </li> -->
       </ul>
       <form class="d-flex" action="search_product.php" method="get">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
@@ -163,6 +163,9 @@ include('includes/connect.php');
         }
         if(isset($_GET['my_orders'])){
             include('user_orders.php');
+        }
+        if(isset($_GET['delete_account'])){
+            include('delete_account.php');
         }
         ?>
     </div>

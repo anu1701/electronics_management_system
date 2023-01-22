@@ -1,5 +1,6 @@
 <?php
 include('includes/connect.php');
+session_start();
 if(isset($_GET['order_id'])){
     $order_id=$_GET['order_id'];
     $select_data="select * from user_orders where order_id=$order_id";
@@ -9,19 +10,19 @@ if(isset($_GET['order_id'])){
     $amount_due=$row_fetch['amount_due'];
   
 }
-if(isset($_POST['confirm_payment']))
+if(isset($_POST['confirm']))
 {
-    $invoice_number=$_POST['invoice_number'];
-  $amount=$_POST['amount'];
+    $invoice_number=$_POST['invoicee_number'];
+    $amount=$_POST['amount'];
    $payment_mode=$_POST['payment_mode'];
-  $insert_query="insert into user_payments (order_id,invoice_number,amount,payment_mode) values($order_id, $invoice_number,$amount,'$payment_mode')";
+  $insert_query="insert into `user_payments` (order_id,invoice_number,amount,payment_mode) values ($order_id, $invoice_number,$amount,'$payment_mode')";
     $result=mysqli_query($con,$insert_query);
     if($result){
-        echo "<h3 class='text-center'>Successfully Completed THe Payment<h3>";
+        echo "<h3 class='text-center'>Successfully Completed The Payment<h3>";
         echo "<script>window.open('profile.php?my_orders','_self')</script>";
     }
-    $update_orders="update user_orders set order_status='Complete' where order_id=$order_id ";
-    $result_orders=mysqli_query($con,$update_orders);
+     $update_orders="update user_orders set order_status='Complete' where order_id=$order_id ";
+     $result_orders=mysqli_query($con,$update_orders);
 }
     ?>
 <!DOCTYPE html>
@@ -43,7 +44,7 @@ if(isset($_POST['confirm_payment']))
         <h1 class="text-center" style="color:#D09CFA">Confirm Payment</h1>
         <form action="" method="post">
             <div class="form-outline my-4 text-center w-50 m-auto">
-                <input type="text" class="form-control w-50 m-auto" name="invoice_number" value="<?php echo $invoice_number?>" style="color:#301E67">
+                <input type="text" class="form-control w-50 m-auto" name="invoicee_number" value="<?php echo $invoice_number?>" style="color:#301E67">
             </div>
             <div class="form-outline my-4 text-center w-50 m-auto">
                 <label for="" class="text-light">Amount</label>
@@ -60,7 +61,7 @@ if(isset($_POST['confirm_payment']))
                   </select>
             </div>
             <div class="form-outline my-4 text-center w-50 m-auto">
-                <input type="submit" class="py-2 px-3 border-0" value="confirm_payment" name="confirm">
+                <input type="submit" class="py-2 px-3 border-0" value="confirm payment" name="confirm">
             </div>
         </form>
     </div>
