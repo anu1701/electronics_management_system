@@ -111,6 +111,7 @@ session_start();
                   <th><a href="index.php?insert_category" class="nav-link text-light " >Insert Categories</a></th>  
                    <th> <a href="index.php?view_categories" class="nav-link text-light " >View Categories</a></th>
                    <th><a href="index.php?insert_brand" class="nav-link text-light " >Insert Brands</a></th> 
+                   <th> <a href="index.php?view_brands" class="nav-link text-light " >View Brands</a></th>
                     <th><a href="index.php?list_orders" class="nav-link text-light " >All Orders</a></th>
                     <th><a href="index.php?list_payments" class="nav-link text-light " >All Payments</a></th>
                     <th><a href="index.php?list_users" class="nav-link text-light ">List Users</a></th>
