@@ -1,7 +1,7 @@
 <?php
 include('../includes/connect.php');
 if(isset($_POST['insert_product'])){
-
+  $maxsize=1048577;
     $product_title = $_POST['product_title'];
     $description = $_POST['description'];
     $product_keywords = $_POST['product_keywords'];
@@ -9,7 +9,9 @@ if(isset($_POST['insert_product'])){
     $product_brands = $_POST['product_brands'];
     $product_price = $_POST['product_price'];
     $product_status = 'true';
-
+    //  if($_FILES['product_image1']['size']>=$maxsize){
+    //     echo "<script>alert('file size maust be 1mb or less'</script>";
+    //  }else{
     // accessing images
     
     $product_image1 = $_FILES['product_image1']['name'];
@@ -19,9 +21,10 @@ if(isset($_POST['insert_product'])){
     // accessing image tmp name
     
     $temp_image1 = $_FILES['product_image1']['tmp_name'];
-      
-    
-
+     }  
+     if($_FILES['product_image1']['size']>=$maxsize){
+       echo "<script>alert('file size must be 1mb or less')</script>";}
+  else{
     // checking empty condition
     if($product_title=='' or $description=='' or $product_keywords=='' or $product_category=='' or $product_brands=='' or $product_price=='' or $product_image1==''){
         echo "<script>alert('Please fill all the available fields')</script>";

@@ -8,7 +8,7 @@
             <th>Delete</th>
         </tr>
     </thead>
-    <tbody class="bg-secondary text-light">
+    <tbody class="text-dark">
     <?php
     $select_cat="Select * from brands";
     $result=mysqli_query($con,$select_cat);
@@ -22,8 +22,8 @@
         <tr class="text-center">
             <td><?php echo $number; ?></td>
             <td><?php echo $brand_title; ?></td>
-            <td><a href='index.php?edit_brands=<?php echo $brand_id; ?>' class='text-light'><i class='fa-solid fa-pen-to-square'></i></a></td>
-            <td><a href='index.php?delete_brands=<?php echo $brand_id; ?>' type="button" class="text-light" data-toggle="modal" data-target="#exampleModal"><i class='fa-solid fa-trash'></i></a></td>
+            <td><a href='index.php?edit_brands=<?php echo $brand_id; ?>' class='text-dark'><i class='fa-solid fa-pen-to-square'></i></a></td>
+            <td><a href='index.php?delete_brands=<?php echo $brand_id; ?>' type="button" class="text-dark" data-toggle="modal" data-target="#exampleModal"><i class='fa-solid fa-trash'></i></a></td>
         </tr>
     <?php    
     }
