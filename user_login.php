@@ -72,6 +72,7 @@ include('functions/common_functions.php');
 <!--php code-->
 <?php
 if(isset($_POST['user_register'])){
+    $maxsize=1048577;
     $user_username=$_POST['user_username'];
     $user_phone=$_POST['user_phone'];
     $user_email=$_POST['user_email'];
@@ -82,6 +83,9 @@ if(isset($_POST['user_register'])){
     $user_image=$_FILES['image']['name'];
     $user_image_tmp=$_FILES['image']['tmp_name'];
     $user_ip=getIPAddress();
+    if($_FILES['image']['size']>=$maxsize){
+        echo "<script>alert('file size must be 1mb or less')</script>";}
+   else{
    //select query
    $select_query1="select * from user where  user_name= '$user_username' or user_email='$user_email'";
    $result=mysqli_query($con,$select_query1);
@@ -99,7 +103,7 @@ if(isset($_POST['user_register'])){
     $insert_query="insert into user(user_name,user_email,user_password,user_image,user_ip,user_address,	user_mobile)
     values('$user_username','$user_email','$hash_password',' $user_image','  $user_ip','$user_address',' $user_phone')";
     $sql_execute=mysqli_query($con,$insert_query);
-}
+}}
     
  //selecting cart items
  $select_cart_items="select * from cart_details where ip_address=' $user_ip'"  ;
