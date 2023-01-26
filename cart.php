@@ -137,6 +137,7 @@ cart();
                         $get_ip_add = getIPAddress();
                         $total_price = 0;
                         $cart_query = "Select * from cart_details where ip_address='$get_ip_add'";
+                       // echo $cart_query;
                         $result=mysqli_query($con, $cart_query);
                         $result_count=mysqli_num_rows($result);
                         if($result_count>0){

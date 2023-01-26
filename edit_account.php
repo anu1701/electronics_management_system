@@ -25,7 +25,7 @@ if(isset($_GET['edit_account'])){
         $result_query_update=mysqli_query($con,$update_data);
         if($result_query_update){
             echo "<script>alert('Data updated successfully')</script>";
-            echo "<script>window.open('logout.php','_self')</script>";
+            echo "<script>window.open('profile.php','_self')</script>";
         }
     }
 
@@ -62,7 +62,7 @@ if(isset($_GET['edit_account'])){
         <input type="email" class="form-control w-50 m-auto" name="user_email" value="<?php echo $user_email?>">
     </div>
     <div class="form-outline mb-4 d-flex w-50 m-auto">
-        <input type="file" class="form-control m-auto "  name="user_image" value="?<php echo $user_image?>">
+        <input type="file" class="form-control m-auto "  name="user_image" value="?<php echo $user_image?>" >
         <img src="user_images/<?php echo $user_image?>" alt="" class="pff">
     </div>
     <div class="form-outline mb-4">

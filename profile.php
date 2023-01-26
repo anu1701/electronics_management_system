@@ -20,11 +20,12 @@ include('includes/connect.php');
 </head>
 <style>
     .pf_img{
-        width:70%;
+        width:100px;;
         /*height:90%;*/
         margin:auto;
         display:block;
         object-fit:contain;
+        border-radius:20%;
     }
     </style>
 <body>

@@ -39,7 +39,7 @@ include('functions/common_functions.php');
                     <h2 class="h2">SIGN UP</h2>
                     <form action="" method="post" enctype="multipart/form-data">
                         <input type="text" class="input-box" placeholder="Name" required="required" autocomplete="off" name="user_username">
-                        <input type="tel" class="input-box" placeholder=" phone number" required="required" autocomplete="off"  name="user_phone">
+                        <input type="tel" class="input-box" placeholder=" phone number" required="required" autocomplete="off"  name="user_phone" title="Please enter 10 digits only" pattern="[1-9]{1}[0-9]{9}">
                            <button> <label for="file">image
                             <input type="file" class="input-box" placeholder=" image" required="required" autocomplete="off" name="image"></label></button>
                       

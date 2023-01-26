@@ -48,7 +48,7 @@ session_start();
         width:100vh;
         height:15vh;
         justify-content:center;
-       
+        
        }
     
     </style>
@@ -64,7 +64,7 @@ session_start();
                 <nav class="navbar navbar-expand-lg">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Welcome Guest</a>
+                            <a href="" class="nav-link">Welcome </a>
                         </li>
                     </ul>
                 </nav>
@@ -104,7 +104,7 @@ session_start();
                     <p class="text-light text-center">Admin Name</p>
                 </div> -->
 
-                <div class=" text-center m-auto">
+                <div class=" text-center m-auto" >
                 <table class="table table-bordered mt-5"><thead class="nav-link text-light  " style="background-color:#4F3B78"><tr>
                    <th><a href="insert_product.php" class="nav-link text-light  " >Insert Products</a></th> 
                    <th><a href="index.php?view_products" class="nav-link text-light  " >View Products</a></th> 
@@ -114,6 +114,7 @@ session_start();
                     <th><a href="index.php?list_orders" class="nav-link text-light " >All Orders</a></th>
                     <th><a href="index.php?list_payments" class="nav-link text-light " >All Payments</a></th>
                     <th><a href="index.php?list_users" class="nav-link text-light ">List Users</a></th>
+                    <th><a href="index.php?list_feedbacks" class="nav-link text-light ">Customer Feedback</a></th>
                    <th><a href="admin_logout.php" class="nav-link text-light" >Logout</a>
                    </th>
                      </tr>
@@ -167,6 +168,9 @@ session_start();
         }
         if (isset($_GET['list_users'])) {
             include('list_users.php');
+        }
+        if (isset($_GET['list_feedbacks'])) {
+            include('list_feedbacks.php');
         }
 
         ?>
