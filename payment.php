@@ -26,17 +26,16 @@ include('functions/common_functions.php');
 </head>
 
 <body>
-    <!-- <?php
+    <?php
     //php code to access user id
     //  global $con;
-    // $user_ip= getIPAddress();
-    //  $get_user1="select user_ip from user";
+     $user_ip= getIPAddress();
+     $get_user1="select * from user where user_ip='$user_ip'";
     //  echo $get_user1;
-    // $result1=mysqli_query($con,$get_user1);
-    // $run_query=mysqli_fetch_array($result1);
-    //  $user_id1=$run_query['user_id'];// $user_id=$row_query['user_id'];
-    
-?> -->
+     $result1=mysqli_query($con,$get_user1);
+    $run_query=mysqli_fetch_array($result1);
+    $user_id=$run_query['user_id'];
+?> 
    <div class="container">
     <h2 class="text-center" style="color:#7b70b7">Payment Options</h2>
     <div class="row d-flex justify-content-center align-items-center my-5">
@@ -45,7 +44,8 @@ include('functions/common_functions.php');
         <a href="https://www.paypal.com/" target="_blank"><img src="./images/pay1.jpg" alt=" " class=img></a>
         </div>
         <div class="col-md-6">
-        <a href="order.php?user_id=1" ><img src="./images/pay2.jpg" alt="" class=img></a>
+        <a href="order.php?user_id= <?php echo $user_id?>"><img src="./images/pay2.jpg" alt="" class=img></a>
+        <!-- <a href="order.php?user_id=1" ><img src="./images/pay2.jpg" alt="" class=img></a> -->
         </div> 
 
     </div>

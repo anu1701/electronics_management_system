@@ -25,7 +25,7 @@ session_start();
         <h2 class="text-center mb-5">Admin Login</h2>
         <div class="row d-flex justify-content-center">
             <div class="col-lg-6 col-xl-5">
-                <img src="../images/admin_login.jpg" alt="Admin Registration" class="img-fluid">
+                <img src="../images/adminlogin.webp" alt="Admin Registration" class="img-fluid">
             </div>
             <div class="col-lg-6 col-xl-4">
                 <form action="" method="post">
@@ -38,7 +38,7 @@ session_start();
                         <input type="password" id="password" name="password" placeholder="Enter your password" required="required" class="form-control">
                     </div>
                     <div>
-                        <input type="submit" class="bg-info py-2 px-3 border-0" name="admin_login" value="Login">
+                        <input type="submit" class=" py-2 px-3 border-0" name="admin_login" value="Login" style="background-color:#7b70b7">
                         <p class="small fw-bold mt-2 pt-1">Don't you have an account? <a href="admin_registration.php" class="link-danger">Register</a></p>
                     </div>
                 </form>

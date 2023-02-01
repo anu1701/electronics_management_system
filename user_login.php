@@ -101,12 +101,12 @@ if(isset($_POST['user_register'])){
     move_uploaded_file($user_image_tmp,"user_images/ $user_image");
     //insert query
     $insert_query="insert into user(user_name,user_email,user_password,user_image,user_ip,user_address,	user_mobile)
-    values('$user_username','$user_email','$hash_password',' $user_image','  $user_ip','$user_address',' $user_phone')";
+    values('$user_username','$user_email','$hash_password','$user_image','$user_ip','$user_address','$user_phone')";
     $sql_execute=mysqli_query($con,$insert_query);
 }}
     
  //selecting cart items
- $select_cart_items="select * from cart_details where ip_address=' $user_ip'"  ;
+ $select_cart_items="select * from cart_details where ip_address='$user_ip'"  ;
  $result_cart=mysqli_query($con,$select_cart_items);
  $rows_count=mysqli_num_rows($result_cart);
  if($rows_count>0){

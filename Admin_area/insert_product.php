@@ -21,9 +21,10 @@ if(isset($_POST['insert_product'])){
     // accessing image tmp name
     
     $temp_image1 = $_FILES['product_image1']['tmp_name'];
-     }  
+     
      if($_FILES['product_image1']['size']>=$maxsize){
-       echo "<script>alert('file size must be 1mb or less')</script>";}
+       echo "<script>alert('file size must be 1mb or less')</script>";
+    }
   else{
     // checking empty condition
     if($product_title=='' or $description=='' or $product_keywords=='' or $product_category=='' or $product_brands=='' or $product_price=='' or $product_image1==''){
@@ -38,7 +39,7 @@ if(isset($_POST['insert_product'])){
             echo "<script>alert('Successfully inserted the products')</script>";
         }
     }
-}
+}}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -125,7 +126,7 @@ if(isset($_POST['insert_product'])){
 
         <!-- price -->
         <div class="form-outline mb-4 w-50 m-auto">
-            <input type="submit" name="insert_product" class="btn btn-info mb-3 px-3" value="Insert Products">
+            <input type="submit" name="insert_product" class="btn  mb-3 px-3 " value="Insert Products" style="background-color:#D09CFA;">
         </div>
         </form>
     </div>
