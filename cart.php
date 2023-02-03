@@ -170,14 +170,17 @@ cart();
                         <td><img src="./images/<?php echo $product_image1 ?>" alt="" class="cart_image"></td>
                         <td><input type="number" name="quantity" class="form-input w-50" min="1" max="100" value="min"></td>
                         <?php
-                          $update_cart = "update cart_details set quantity=1 where ip_address='$get_ip_add'";  
+                          $update_cart = "update cart_details set quantity=1 where ip_address='$get_ip_add' ";  
+            
                           if(isset($_POST['update_cart'])){
-                      $quantities = $_POST['quantity'];
-                            //$quantities = (int) $quantities;
-                         $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add'";  
+                           $quantities =$_POST['quantity'];
+                      
+                            //$quantities = (int) $quantities; 
+                         
+                           $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_add' and product_id=$product_id";  
                             $result_products_quantity = mysqli_query($con, $update_cart);
                             $total_price = $total_price * $quantities;
-                          }
+                           }
                         ?>
                         <td><?php echo $price_table ?>/-</td>
                         <td><input type="checkbox" name="removeitem[]" value="<?php
@@ -185,8 +188,8 @@ cart();
                         ?>"></td>
                         <td>
                             <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Update</button> -->
-                            <input type="submit" value="Update Cart" class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8' name="update_cart">
-                           <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Remove</button>-->
+                            <input type="submit" value="Update Cart" class="btn btn-light px-3 py-2 border-0 mx-3" style='background-color:#810CA8' name="update_cart"></td>
+                           <!-- <button class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8'>Remove</button>--><td>
                            <input type="submit" value="Remove" class='btn btn-light px-3 py-2 border-0 mx-3' style='background-color:#810CA8' name="remove_cart">
                         </td>
                     </tr>

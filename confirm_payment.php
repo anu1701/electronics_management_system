@@ -57,7 +57,6 @@ if(isset($_POST['confirm']))
                     <option >Net Banking</option>
                     <option >Paypal</option>
                     <option>Cask on Delivery</option>
-                    <option>Pay Offline</option>
                   </select>
             </div>
             <div class="form-outline my-4 text-center w-50 m-auto">
