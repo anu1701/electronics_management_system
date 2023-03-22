@@ -14,7 +14,7 @@ if(isset($_POST['contact']))
     $email=$_POST['email'];
    $phone=$_POST['phone'];
    $message=$_POST['message'];
-  $insert_query="insert into contact (fname,lname,email,phone,message) values (' $fname','$lname','$email','$phone','$message')";
+  $insert_query="insert into feedback (fname,lname,email,phone,message) values (' $fname','$lname','$email','$phone','$message')";
     $result=mysqli_query($con,$insert_query);
     if($result){
         echo "<script>alert('thanks for keeping in touch')</script>";
