@@ -69,7 +69,7 @@ if(isset($_GET['edit_account'])){
         <input type="text" class="form-control w-50 m-auto" value="<?php echo $user_address?>"name="user_address">
     </div>
     <div class="form-outline mb-4">
-        <input type="tel" class="form-control w-50 m-auto" name="user_mobile" value="<?php echo $user_mobile?>">
+        <input type="tel" class="form-control w-50 m-auto" name="user_mobile"  title="Please enter 10 digits only" pattern="[1-9]{1}[0-9]{9}" value="<?php echo $user_mobile?>">
     </div>
   
         <input type="submit"  name="user_update" value="Update" style="background-color:#7b70b7" class="py-2 px-3 border-0" >
